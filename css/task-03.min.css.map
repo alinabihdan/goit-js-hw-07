@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,AAAC,CACP,OAAO,CAAE,IAAI,CACd,AAED,AAAA,cAAc,CAAG,cAAc,AAAC,CAC9B,WAAW,CAAE,IAAI,CAClB,AAED,AAAA,cAAc,AAAC,CACb,KAAK,CAAE,2BAA2B,CACnC",
+    "sources": [
+        "../sass/tasks/task-03.scss"
+    ],
+    "names": [],
+    "file": "task-03.min.css"
+}

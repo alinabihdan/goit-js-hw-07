@@ -3,7 +3,8 @@
 // В HTML есть список ul#gallery.
 
 // <ul id="gallery"></ul>
-// Используй массив объектов images для создания тегов img вложенных в li. Для создания разметки используй шаблонные строки и insertAdjacentHTML().
+// Используй массив объектов images для создания тегов img вложенных в li. Для создания разметки используй шаблонные
+// строки и insertAdjacentHTML().
 
 // Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 // Добавь минимальное оформление галереи флексбоксами или гридами через css-классы.
@@ -22,3 +23,17 @@ const images = [
     alt: "Group of Horses Running",
   },
 ];
+
+const galleryContainerEl = document.querySelector("#gallery");
+
+const makeGalleryListMarkup = ({ url, alt }) => {
+  return `
+    <li class="gallery__item">
+        <img class="gallery__img" src="${url}" alt="${alt}">
+    </li>
+    `;
+};
+
+const makeGalleryList = images.map(makeGalleryListMarkup).join("");
+
+galleryContainerEl.insertAdjacentHTML("beforeend", makeGalleryList);

@@ -1,0 +1,2 @@
+.gallery{display:flex}.gallery__item+.gallery__item{margin-left:30px}.gallery__item{width:calc((100% - 15px * 6) / 3)}
+/*# sourceMappingURL=task-03.min.css.map */
