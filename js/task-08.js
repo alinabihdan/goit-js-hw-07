@@ -40,6 +40,8 @@ function destroyBoxes() {
   refs.boxesRef.innerHTML = "";
   refs.input.value = "";
   amount = 0;
+  width = 20;
+  height = 20;
 }
 
 const randomColor = () => {
