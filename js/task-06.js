@@ -1,4 +1,5 @@
-// Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое на правильное количество символов.
+// Напиши скрипт, который бы при потере фокуса на инпуте,
+// проверял его содержимое на правильное количество символов.
 
 // <input
 //   type="text"
@@ -10,14 +11,20 @@
 // Если введено подходящее количество, то border инпута становится зеленым, если неправильное - красным.
 // Для добавления стилей, используй CSS-классы valid и invalid.
 
-// #validation-input {
-//   border: 3px solid #bdbdbd;
-// }
+const inputRef = document.querySelector("#validation-input");
+let validLength = Number(inputRef.dataset.length);
 
-// #validation-input.valid {
-//   border-color: #4caf50;
-// }
+// console.log(validLength);
 
-// #validation-input.invalid {
-//   border-color: #f44336;
-// }
+function onCheckLengthInput(event) {
+  const inputValue = event.target.value;
+  if (inputValue.length !== validLength) {
+    inputRef.classList.remove("valid");
+    inputRef.classList.add("invalid");
+  } else {
+    inputRef.classList.remove("invalid");
+    inputRef.classList.add("valid");
+  }
+}
+
+inputRef.addEventListener("blur", onCheckLengthInput);

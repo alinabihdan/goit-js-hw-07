@@ -16,4 +16,16 @@ img {
 .gallery__item {
   width: calc((100% - 15px * 6) / 3);
 }
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
 /*# sourceMappingURL=main.css.map */
