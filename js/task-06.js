@@ -14,7 +14,8 @@
 const inputRef = document.querySelector("#validation-input");
 let validLength = Number(inputRef.dataset.length);
 
-// console.log(validLength);
+// console.log(typeOf validLength);
+inputRef.addEventListener("blur", onCheckLengthInput);
 
 function onCheckLengthInput(event) {
   const inputValue = event.target.value;
@@ -26,5 +27,3 @@ function onCheckLengthInput(event) {
     inputRef.classList.add("valid");
   }
 }
-
-inputRef.addEventListener("blur", onCheckLengthInput);

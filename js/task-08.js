@@ -18,3 +18,42 @@
 // </div>
 
 // <div id="boxes"></div>
+const refs = {
+  input: document.querySelector('[type="number"]'),
+  btnRender: document.querySelector('[data-action="render"]'),
+  btnDestroy: document.querySelector('[data-action="destroy"]'),
+  boxesRef: document.querySelector("#boxes"),
+};
+
+let amount = 0;
+let width = 20;
+let height = 20;
+
+function createBoxes(amount) {
+  amount = refs.input.value;
+  const array = [];
+
+  for (let i = 0; i < amount; i += 1) {
+    width += 10;
+    height += 10;
+    const newDiv = document.createElement("div");
+    newDiv.style.width = width + "px";
+    newDiv.style.height = height + "px";
+    newDiv.style.backgroundColor = randomColor();
+    array.push(newDiv);
+  }
+  return refs.boxesRef.append(...array);
+}
+
+function destroyBoxes() {
+  refs.boxesRef.innerHTML = "";
+  refs.input.value = "";
+}
+
+const randomColor = () => {
+  return `#${(((1 << 24) * Math.random()) | 0).toString(16)}`;
+};
+
+// слушатели
+refs.btnRender.addEventListener("click", createBoxes);
+refs.btnDestroy.addEventListener("click", destroyBoxes);

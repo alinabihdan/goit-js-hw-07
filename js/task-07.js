@@ -6,3 +6,14 @@
 <br />
 <span id="text">Абракадабра!</span> */
 }
+
+const inputRef = document.querySelector("#font-size-control");
+const spanRef = document.querySelector("#text");
+
+inputRef.addEventListener("change", onFontSizeChange);
+
+function onFontSizeChange() {
+  let inputValue = inputRef.value + "px";
+  // console.log(inputValue);
+  spanRef.style.fontSize = inputValue;
+}
