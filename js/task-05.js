@@ -13,7 +13,7 @@ refs.input.addEventListener("input", onInputChange);
 
 function onInputChange(event) {
   refs.name.textContent = event.target.value;
-  if (refs.name.textContent === "") {
+  if (refs.name.textContent.trim() === "") {
     refs.name.textContent = "незнакомец";
   }
 }

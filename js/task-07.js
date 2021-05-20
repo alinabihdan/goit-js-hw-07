@@ -10,7 +10,7 @@
 const inputRef = document.querySelector("#font-size-control");
 const spanRef = document.querySelector("#text");
 
-inputRef.addEventListener("change", onFontSizeChange);
+inputRef.addEventListener("input", onFontSizeChange);
 
 function onFontSizeChange() {
   let inputValue = inputRef.value + "px";
