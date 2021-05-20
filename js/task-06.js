@@ -18,7 +18,7 @@ let validLength = Number(inputRef.dataset.length);
 inputRef.addEventListener("blur", onCheckLengthInput);
 
 function onCheckLengthInput(event) {
-  const inputValue = event.target.value.trim();
+  const inputValue = event.target.value;
   if (inputValue.length !== validLength) {
     inputRef.classList.remove("valid");
     inputRef.classList.add("invalid");
